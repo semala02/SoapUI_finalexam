@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="701d1dc1-0d7e-4d06-9168-d5226d139ab4" activeEnvironment="Default" name="periodictable git" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="73555bab-9243-4097-a83f-12b7974fc988" wsaVersion="NONE" name="periodictableSoap" type="wsdl" bindingName="{http://www.webserviceX.NET}periodictableSoap" soapVersion="1_1" anonymous="optional" definition="http://www.webservicex.net/periodictable.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.webservicex.net/periodictable.asmx?WSDL"><con:part><con:url>http://www.webservicex.net/periodictable.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.webserviceX.NET" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webserviceX.NET" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.webserviceX.NET">
+      <s:element name="GetAtoms">
+        <s:complexType/>
+      </s:element>
+      <s:element name="GetAtomsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAtomsResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAtomicWeight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ElementName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAtomicWeightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAtomicWeightResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAtomicNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ElementName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAtomicNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAtomicNumberResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetElementSymbol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ElementName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetElementSymbolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetElementSymbolResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAtomsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAtoms"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAtomsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicWeightSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAtomicWeight"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicWeightSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAtomicWeightResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAtomicNumber"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAtomicNumberResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetElementSymbolSoapIn">
+    <wsdl:part name="parameters" element="tns:GetElementSymbol"/>
+  </wsdl:message>
+  <wsdl:message name="GetElementSymbolSoapOut">
+    <wsdl:part name="parameters" element="tns:GetElementSymbolResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomsHttpGetIn"/>
+  <wsdl:message name="GetAtomsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicWeightHttpGetIn">
+    <wsdl:part name="ElementName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicWeightHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicNumberHttpGetIn">
+    <wsdl:part name="ElementName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetElementSymbolHttpGetIn">
+    <wsdl:part name="ElementName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetElementSymbolHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomsHttpPostIn"/>
+  <wsdl:message name="GetAtomsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicWeightHttpPostIn">
+    <wsdl:part name="ElementName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicWeightHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicNumberHttpPostIn">
+    <wsdl:part name="ElementName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAtomicNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetElementSymbolHttpPostIn">
+    <wsdl:part name="ElementName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetElementSymbolHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:portType name="periodictableSoap">
+    <wsdl:operation name="GetAtoms">
+      <wsdl:documentation>Get element</wsdl:documentation>
+      <wsdl:input message="tns:GetAtomsSoapIn"/>
+      <wsdl:output message="tns:GetAtomsSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicWeight">
+      <wsdl:documentation>Get atomic wieght by element name</wsdl:documentation>
+      <wsdl:input message="tns:GetAtomicWeightSoapIn"/>
+      <wsdl:output message="tns:GetAtomicWeightSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicNumber">
+      <wsdl:documentation>Get atomic Number by element name</wsdl:documentation>
+      <wsdl:input message="tns:GetAtomicNumberSoapIn"/>
+      <wsdl:output message="tns:GetAtomicNumberSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetElementSymbol">
+      <wsdl:documentation>Get atomic symbol by element name</wsdl:documentation>
+      <wsdl:input message="tns:GetElementSymbolSoapIn"/>
+      <wsdl:output message="tns:GetElementSymbolSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="periodictableHttpGet">
+    <wsdl:operation name="GetAtoms">
+      <wsdl:documentation>Get element</wsdl:documentation>
+      <wsdl:input message="tns:GetAtomsHttpGetIn"/>
+      <wsdl:output message="tns:GetAtomsHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicWeight">
+      <wsdl:documentation>Get atomic wieght by element name</wsdl:documentation>
+      <wsdl:input message="tns:GetAtomicWeightHttpGetIn"/>
+      <wsdl:output message="tns:GetAtomicWeightHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicNumber">
+      <wsdl:documentation>Get atomic Number by element name</wsdl:documentation>
+      <wsdl:input message="tns:GetAtomicNumberHttpGetIn"/>
+      <wsdl:output message="tns:GetAtomicNumberHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetElementSymbol">
+      <wsdl:documentation>Get atomic symbol by element name</wsdl:documentation>
+      <wsdl:input message="tns:GetElementSymbolHttpGetIn"/>
+      <wsdl:output message="tns:GetElementSymbolHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="periodictableHttpPost">
+    <wsdl:operation name="GetAtoms">
+      <wsdl:documentation>Get element</wsdl:documentation>
+      <wsdl:input message="tns:GetAtomsHttpPostIn"/>
+      <wsdl:output message="tns:GetAtomsHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicWeight">
+      <wsdl:documentation>Get atomic wieght by element name</wsdl:documentation>
+      <wsdl:input message="tns:GetAtomicWeightHttpPostIn"/>
+      <wsdl:output message="tns:GetAtomicWeightHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicNumber">
+      <wsdl:documentation>Get atomic Number by element name</wsdl:documentation>
+      <wsdl:input message="tns:GetAtomicNumberHttpPostIn"/>
+      <wsdl:output message="tns:GetAtomicNumberHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetElementSymbol">
+      <wsdl:documentation>Get atomic symbol by element name</wsdl:documentation>
+      <wsdl:input message="tns:GetElementSymbolHttpPostIn"/>
+      <wsdl:output message="tns:GetElementSymbolHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="periodictableSoap" type="tns:periodictableSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAtoms">
+      <soap:operation soapAction="http://www.webserviceX.NET/GetAtoms" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicWeight">
+      <soap:operation soapAction="http://www.webserviceX.NET/GetAtomicWeight" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicNumber">
+      <soap:operation soapAction="http://www.webserviceX.NET/GetAtomicNumber" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetElementSymbol">
+      <soap:operation soapAction="http://www.webserviceX.NET/GetElementSymbol" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="periodictableSoap12" type="tns:periodictableSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAtoms">
+      <soap12:operation soapAction="http://www.webserviceX.NET/GetAtoms" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicWeight">
+      <soap12:operation soapAction="http://www.webserviceX.NET/GetAtomicWeight" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicNumber">
+      <soap12:operation soapAction="http://www.webserviceX.NET/GetAtomicNumber" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetElementSymbol">
+      <soap12:operation soapAction="http://www.webserviceX.NET/GetElementSymbol" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="periodictableHttpGet" type="tns:periodictableHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="GetAtoms">
+      <http:operation location="/GetAtoms"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicWeight">
+      <http:operation location="/GetAtomicWeight"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicNumber">
+      <http:operation location="/GetAtomicNumber"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetElementSymbol">
+      <http:operation location="/GetElementSymbol"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="periodictableHttpPost" type="tns:periodictableHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="GetAtoms">
+      <http:operation location="/GetAtoms"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicWeight">
+      <http:operation location="/GetAtomicWeight"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAtomicNumber">
+      <http:operation location="/GetAtomicNumber"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetElementSymbol">
+      <http:operation location="/GetElementSymbol"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="periodictable">
+    <wsdl:port name="periodictableSoap" binding="tns:periodictableSoap">
+      <soap:address location="http://www.webservicex.net/periodictable.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="periodictableSoap12" binding="tns:periodictableSoap12">
+      <soap12:address location="http://www.webservicex.net/periodictable.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="periodictableHttpGet" binding="tns:periodictableHttpGet">
+      <http:address location="http://www.webservicex.net/periodictable.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="periodictableHttpPost" binding="tns:periodictableHttpPost">
+      <http:address location="http://www.webservicex.net/periodictable.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.webservicex.net/periodictable.asmx</con:endpoint></con:endpoints><con:operation id="84a70276-ec02-4f11-8521-f760d8f22d54" isOneWay="false" action="http://www.webserviceX.NET/GetAtomicNumber" name="GetAtomicNumber" bindingOperationName="GetAtomicNumber" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9c0effd6-b93a-4540-8508-fc06d7567307" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/periodictable.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:GetAtomicNumber>\r
+         <!--Optional:-->\r
+         <web:ElementName>?</web:ElementName>\r
+      </web:GetAtomicNumber>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/GetAtomicNumber"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b31b99b7-0f9f-4046-a29d-e7c4b70be46b" isOneWay="false" action="http://www.webserviceX.NET/GetAtomicWeight" name="GetAtomicWeight" bindingOperationName="GetAtomicWeight" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fd3de2bc-64a0-4099-8a3d-87cb0a0bd0a7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/periodictable.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:GetAtomicWeight>\r
+         <!--Optional:-->\r
+         <web:ElementName>?</web:ElementName>\r
+      </web:GetAtomicWeight>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/GetAtomicWeight"/></con:call></con:operation><con:operation id="46f9696a-158c-446e-9cdc-251d5611f2f4" isOneWay="false" action="http://www.webserviceX.NET/GetAtoms" name="GetAtoms" bindingOperationName="GetAtoms" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="371edb83-a19d-47e9-83bc-7a43316ee0ba" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/periodictable.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:GetAtoms/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/GetAtoms"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d259d7de-5642-4e48-a6f4-209bfd22ea46" isOneWay="false" action="http://www.webserviceX.NET/GetElementSymbol" name="GetElementSymbol" bindingOperationName="GetElementSymbol" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0f23b46a-fffa-423f-b537-fe582226d002" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/periodictable.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:GetElementSymbol>\r
+         <!--Optional:-->\r
+         <web:ElementName>?</web:ElementName>\r
+      </web:GetElementSymbol>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/GetElementSymbol"/></con:call></con:operation></con:interface><con:testSuite id="ad0a7ff6-9f2c-4777-93fe-55c527c13817" name="PeriodicTable_TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="695b57fa-c16d-4b79-9e3a-dd6d89e86097" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PeriodicTable_TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetAtoms" id="d97edc90-0175-4738-963e-c795c6340b2d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>periodictableSoap</con:interface><con:operation>GetAtoms</con:operation><con:request name="GetAtoms" id="b6d6aff8-9d38-4bde-bc4a-bdb5931e1cf6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/periodictable.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetAtoms/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="226f1520-fd5c-40df-b4c3-0cbea9c03ff5"/><con:assertion type="Valid HTTP Status Codes" id="a17782a6-d0e5-497b-a94f-9332beee49c7" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="bc04e322-6e7c-49ae-9427-ee46133e01be" name="Not Contains"><con:configuration><token>Sweden</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="7611b3fb-8200-432e-96c6-d32d07482893" name="XPath Match"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://www.webserviceX.NET';
+matches(//ns1:GetAtomsResponse[1]/ns1:GetAtomsResult[1]/text(),'Actinium')</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetAtomicNumber" id="209ffffc-b0a8-41c3-aa68-ff65186b5624"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>periodictableSoap</con:interface><con:operation>GetAtomicNumber</con:operation><con:request name="GetAtomicNumber" id="570cdd53-f0b3-4f0a-85c4-7289a14b89fa"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/periodictable.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetAtomicNumber>
+         <!--Optional:-->
+         <web:ElementName>${ElementName#elementname}</web:ElementName>
+      </web:GetAtomicNumber>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="48e2b302-ec53-4408-8769-bc24811e8fd7"/><con:assertion type="Valid HTTP Status Codes" id="b5658e8c-ee0d-4e5d-a867-e8c1ca5247a5" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="aff3d8c0-450f-46b2-9c81-22b6e58425aa" name="Not Contains"><con:configuration><token>AF</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="properties" name="ElementName" id="0ddd86aa-83a1-440b-bd2b-e4e4e5c6b55d"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>elementname</con:name><con:value>Actinium</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Weight" id="5efd04f0-ebd0-492e-af60-fe1043dc91eb"><con:settings/><con:config><script>import groovy.xml.*
+
+def atomicweight="Aluminium"
+
+log.info(atomicweight)
+
+com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("atomicweight",atomicweight)</script></con:config></con:testStep><con:testStep type="request" name="GetAtomicWeight" id="5e190062-6ffb-4d77-8e77-c8154996a90a"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>periodictableSoap</con:interface><con:operation>GetAtomicWeight</con:operation><con:request name="GetAtomicWeight" id="0d360fba-fff2-4775-baac-95fed9ed4d99"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/periodictable.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetAtomicWeight>
+         <!--Optional:-->
+         <web:ElementName>${atomicweight}</web:ElementName>
+      </web:GetAtomicWeight>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="580fb8ce-84ae-4265-b9bf-1113b6671442"/><con:assertion type="Valid HTTP Status Codes" id="00faaee3-da39-4f66-8514-b0da84d2f9a5" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="4016fd96-53b5-4c93-b584-40ff4f9c59ae" name="Not Contains"><con:configuration><token>29.00</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="FetchResponse_Atoms" id="c5fb344e-2ff5-4d3f-9684-ab1879e958ce"><con:settings/><con:config><script>import groovy.xml.*
+import groovy.util.XmlParser
+import groovy.util.XmlSlurper
+
+def responseContent=testRunner.testCase.getTestStepByName("GetAtoms").getPropertyValue("Response")
+
+def response=new XmlSlurper().parseText(responseContent).Body.GetAtomsResponse.GetAtomsResult.text()
+
+def elename=new XmlSlurper().parseText(response).Table.ElementName[3]
+
+log.info(elename)
+
+com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("elename",elename.toString())
+</script></con:config></con:testStep><con:testStep type="request" name="GetElementSymbol" id="b2cecbfb-b86d-40ad-a91f-b84be3cc065e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>periodictableSoap</con:interface><con:operation>GetElementSymbol</con:operation><con:request name="GetElementSymbol" id="11410364-1231-4231-8131-e6c58d57873d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/periodictable.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetElementSymbol>
+         <!--Optional:-->
+         <web:ElementName>${elename}</web:ElementName>
+      </web:GetElementSymbol>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="30881c7c-60e2-4240-8bc1-5bd1fef32f33"/><con:assertion type="Valid HTTP Status Codes" id="946c728e-58aa-48e4-bd56-ad4856e05deb" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="ffc3f25a-cdd6-413a-96a2-8ba6b6b18af9" name="Not Contains"><con:configuration><token>AF</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
